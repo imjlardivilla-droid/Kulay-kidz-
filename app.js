@@ -1,4 +1,6 @@
-/* KulayKidz starter prototype — no external services or personal-data collection. */
+/* 
+    { id:'dog', name:'Aso / Dog', svg:`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><g fill="white" stroke="#24212b" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"><path d="M280 210 Q210 110 170 190 L200 340 Q220 390 280 350Z"/><path d="M520 210 Q590 110 630 190 L600 340 Q580 390 520 350Z"/><path d="M270 210 Q400 130 530 210 L550 370 Q540 480 400 480 Q260 480 250 370Z"/><ellipse cx="400" cy="375" rx="90" ry="65"/><circle cx="340" cy="300" r="12"/><circle cx="460" cy="300" r="12"/><path d="M375 350 Q400 330 425 350 Q410 375 400 375 Q390 375 375 350Z"/><path d="M400 375 L400 395 Q370 425 345 395 M400 395 Q430 425 455 395"/></g></svg>` },
+ starter prototype — no external services or personal-data collection. */
 (() => {
   const canvas = document.getElementById('artCanvas');
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
