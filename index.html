@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="tl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ff6fae">
+  <meta name="description" content="KulayKidz — ligtas at masayang coloring at drawing app para sa pamilya.">
+  <title>KulayKidz — Color & Draw</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">🎨</div>
+    <div>
+      <h1>KulayKidz</h1>
+      <p>Color • Draw • Create</p>
+    </div>
+    <button id="installBtn" class="install-btn" hidden>Install app</button>
+  </header>
+
+  <main class="app-shell">
+    <section class="welcome">
+      <div>
+        <h2>Halina, magkulay tayo!</h2>
+        <p>Choose a picture, tap to fill, or draw with your finger.</p>
+      </div>
+      <span class="sparkle" aria-hidden="true">✨</span>
+    </section>
+
+    <section class="page-picker panel">
+      <div class="section-heading">
+        <h2>Mga larawan <span>/ Coloring pages</span></h2>
+        <p>Pumili ng drawing</p>
+      </div>
+      <div id="pageList" class="page-list" aria-label="Coloring page choices"></div>
+    </section>
+
+    <section class="studio panel">
+      <div class="studio-heading">
+        <div>
+          <h2>Coloring studio</h2>
+          <p id="modeHint">Tap a white area to fill it with your chosen color.</p>
+        </div>
+        <div class="mode-switch" role="group" aria-label="Drawing mode">
+          <button class="mode-btn active" data-mode="fill" aria-pressed="true">🪣 Fill</button>
+          <button class="mode-btn" data-mode="draw" aria-pressed="false">✏️ Draw</button>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="artCanvas" width="800" height="600" aria-label="Coloring canvas"></canvas>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Handa na! Ready to create.</p>
+
+      <div class="tool-row">
+        <div class="tool-group">
+          <span class="tool-label">Kulay / Color</span>
+          <div id="palette" class="palette" aria-label="Color palette"></div>
+        </div>
+        <div class="tool-group brush-tools">
+          <label for="brushSize">Brush size <strong id="brushValue">12</strong></label>
+          <input id="brushSize" type="range" min="3" max="36" value="12">
+          <button id="eraserBtn" class="secondary-btn">🧽 Eraser</button>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <button id="undoBtn" class="secondary-btn">↶ Undo</button>
+        <button id="resetBtn" class="secondary-btn">↻ Reset page</button>
+        <button id="saveBtn" class="primary-btn">⬇ Save artwork</button>
+      </div>
+      <p class="privacy-note">🔒 Your artwork stays on this device unless you choose to save it. No account, ads, or personal-data collection in this prototype.</p>
+    </section>
+
+    <section class="parent-note">
+      <strong>For parents / Para sa magulang:</strong>
+      KulayKidz is a starter prototype. Saved pictures are downloaded to the device; this version does not upload drawings to a server.
+    </section>
+  </main>
+  <footer>Made for little artists · KulayKidz prototype</footer>
+  <script src="app.js"></script>
+</body>
+</html>

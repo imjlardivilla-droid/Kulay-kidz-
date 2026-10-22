@@ -1,2 +1,2 @@
-# Kulay-kidz-
-Kulay kidz coloring prototype
+# Kulaykidz
+Kulaykidz coloring app prototype
